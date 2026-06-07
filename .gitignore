@@ -7,4 +7,5 @@ dist/
 output/
 *.pdf
 .DS_Store
+.cache/
 docs/
