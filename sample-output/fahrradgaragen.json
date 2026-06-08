@@ -1,0 +1,765 @@
+[
+  {
+    "bulletPoint": "Fahrradgarage",
+    "description": {
+      "en": "Fahrradgarage"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Lieferung und Montage",
+        "description": {
+          "en": "Lieferung und Montage"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Fahrradgaragen im Baukastensystem liefern und montieren",
+            "description": {
+              "en": "Liefern und Montieren einer Fahrradgarage im Baukastensystem für 3 separat abschließbare Einzelgaragen nach DIN 79008, ADFC-zertifiziertes System"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Komplette Ausführung inklusive Nebenleistungen",
+            "description": {
+              "en": "Die Ausführung erfolgt komplett einschließlich aller für den bestimmungsgemäßen Gebrauch erforderlichen Nebenleistungen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Abmessungen und Konstruktion",
+        "description": {
+          "en": "Abmessungen und Konstruktion"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Abmessungen der Fahrradgaragen",
+            "description": {
+              "en": "Abmessungen: Länge 2,50m, Tiefe 2,00m, Höhe ca. 1,65m."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Tragkonstruktion aus verzinktem Stahlblech",
+            "description": {
+              "en": "Tragkonstruktion aus verzinktem, gekantetem Stahlblech, statisch bemessen nach den einschlägigen Normen, Materialstärke 2mm."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Fassadenbekleidung pulverbeschichtet RAL 7016",
+            "description": {
+              "en": "Fassadenbekleidung aus Stahlblech, Oberfläche pulverbeschichtet mit Universal-Polyesterpulver, Farbe RAL 7016 anthrazitgrau, mit Korrosionsschutz in Anlehung an C3 nach DIN EN ISO 12944-2, alle erdberührendene Teile aus Edelstahl"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Kiesdach mit Holzkonstruktion",
+            "description": {
+              "en": "Dach aus nachhaltiger Holzkonstruktion. Aufbau von innen nach außen bestehend aus - OSB-3-Platte, Dicke ca. 15mm - EPDM-Dachbahn, Dicke ca. 1,5mm - Wurzelschutzvlies - Rundkies, Körnung 16/32mm, Höhe ca. 50mm mit Dachrand aus Glattblech mit Korrosionsschutz C3, pulverbeschichtet analog Fassadenbekleidung."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Entwässerung über Haupt- und Notablauf",
+            "description": {
+              "en": "Entwässerung über Haupt- und Notablauf DN50 aus Kunststoff, Fallrohr innenliegend, Wasseraustritt mittig und unterhalb des Tragkorpus."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Einflüglige Stahltür mit digitalem Schließzylinder",
+            "description": {
+              "en": "Einflüglige Stahltür je Einzelgarage aus gekantetem verzinktem Stahlblech, pulverbeschichtet analog Fassadenbekleidung. Ausstattung mit Aluminium-Drückergarnitur mit innenseitiger Klinke als Notfallöffnung, Türdämpfer und digitalen, batteriebetriebenen Schließzylinder mit Anschluss an eine Buchungsplattform."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Lichte Türöffnungen mindestens 0,70m x 1,45m",
+            "description": {
+              "en": "lichte Türöffnungen: mind. Breite 0,70m x Höhe 1,45m"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Bemessungsgrundlagen Wind- und Schneelast",
+            "description": {
+              "en": "Bemessungsgrundlagen Windlastzone bis Zone 3, Schneelast ca. 1,1kN/m², Wartungslast ca. 1,1 kN/m²"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Aufstellen ohne Bodenverankerung mit Nivellierfüßen",
+            "description": {
+              "en": "Aufstellen ohne Bodenverankerung auf vorhandener wassergebundener Wegedecke gemäß Herstellerangaben mit Nivellierfüßen zum Ausgleich von Gefälle bis ca. 2%."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Zubehör",
+        "description": {
+          "en": "Zubehör"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Fahrradhalter mit Einfahrtschiene",
+            "description": {
+              "en": "Fahrradhalter mit Einfahrtschiene aus Edelstahl zur komfortablen Führung der Räder liefern und montieren, für Reifenbreite von 25 bis 65mm, Vorderradhalter zur Arretierung des Rades und Verhinderung des Herausrollens. Fabrikat: BRIX-IT oder gleichwertig"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": true,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Schwenkbare LED-Lichtleiste",
+            "description": {
+              "en": "schwenkbare LED-Lichtleiste liefern und montieren, batteriebetrieben, mit integriertem Bewegungsensor und energiesparender Zeitschaltung"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Antigraffitischutz",
+            "description": {
+              "en": "Beschichtung mit Antigraffiti-Pulver PU, DB-Zertifizierung, Farbe RAL 7016 anthrazitgrau"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Digitale Plattform",
+    "description": {
+      "en": "Digitale Plattform"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Buchungsplattform",
+        "description": {
+          "en": "Buchungsplattform"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Digitale Buchungsplattform",
+            "description": {
+              "en": "Digitale, cloudbasierte Buchungsplattform liefern, installieren und einrichten ausschließlich nutzbar per Smartphone-App (iOS / Android) und mehrstufigen KI-basierten und telefonischen Kundensupport, ohne stationären Terminal vor Ort. Mit eigenem QR-Code und Buchungsanleitung. Einrichtung des Portals inkl. Beratung des Betreibers zur Bereitstellung der Stammdaten, Einrichtung des Standortes auf dem Server des Betreibers Öffnen von stromnetzunabhängiger, Bluetooth-basierter, stromnetzunabhängiger Schließsysteme Funktionen für App:"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Interactive map and QR code selection",
+            "description": {
+              "en": "Suche und Standortwahl: interaktive Kartenansicht, Auswahl der Abstellanlagen per Link oder QR-Code."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Flexible pricing and booking system",
+            "description": {
+              "en": "Buchung und Verwaltung: zeitlich gestaffelte Preisübersicht, flexible Tarifsysteme (z. B. Pay-as-yougo, Monats- und Jahresmieten)."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Multiple payment methods and auto invoicing",
+            "description": {
+              "en": "Zahlung und Bestätigung: verschiedene Zahlungsmethoden (z. B. Kreditkarte, Klarna, Apple Pay, Google Pay), automatische Rechnungsstellung und Buchungsbestätigung per E-Mail."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Notifications for booking reminders",
+            "description": {
+              "en": "Benachrichtigungen: Erinnerung vor Ablauf des Buchungszeitraums, Informationen zu laufenden oder beendeten Buchungen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "User account with registration and history",
+            "description": {
+              "en": "Nutzerkonto: Registrierung, Login, Änderung persönlicher Daten, Buchungshistorie, Stornofunktionen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "GDPR-compliant server and encrypted data",
+            "description": {
+              "en": "Datenschutz und Sicherheit: DSGVO-konforme Serverbereitstellung, verschlüsselte Datenübertragung."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Support und Verwaltung",
+        "description": {
+          "en": "Support und Verwaltung"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "AI-based 24/7 first level support in 14 languages",
+            "description": {
+              "en": "Automatisierter KI-basierter Kundensupport: 24/7 Kundensupport in 14 Sprachen als First Level Support."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Second level support hotline",
+            "description": {
+              "en": "Kundensupport: Second Level Support Hotline."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Central location and device management",
+            "description": {
+              "en": "Standort- und Anlagenverwaltung: zentrale Verwaltung aller Abstellanlagen und Standorte und detaillierte Konfiguration der Geräte (z. B. technische Parameter, Kapazitäten, Sicherheitsfunktionen)."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Individual tariff and booking management",
+            "description": {
+              "en": "Tarif- und Buchungsmanagement: individuelle Einstellung von Tarifsystemen, Mietdauern und gestaffelten Preisen und Anpassung von Buchungsbedingungen und Reservierungsoptionen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "User and security management with SSO",
+            "description": {
+              "en": "Nutzer- und Sicherheitsmanagement: Verwaltung der Nutzer, Rechte und Zugangsberechtigungen, Integration von Single Sign-On (SSO) für externe Identitätsprovider, DSGVO-konforme Datenhaltung und regelmäßige Updates der Sicherheitsstandards."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Real-time status and reporting functions",
+            "description": {
+              "en": "Auswertungs- und Reporting-Funktionen: Echtzeit-Statusanzeige aller Geräte und statistische Auswertung der Belegungsraten, Verwaltung von Rückerstattungen und detaillierten Abrechnungen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Usage fee for portal and app including maintenance",
+            "description": {
+              "en": "Nutzungsgebühr des Nutzer- und Betreiber-Web-Portal sowie Smartphone-App, inkl. Betrieb und Wartung des Servers, regelmäßige UpDates, Telefon-/remote-Support Gebühr je digitalen Schließzylinder für 60 Monate"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  }
+]

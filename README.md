@@ -17,7 +17,7 @@ Place your tender PDF(s) in a folder (e.g., `sample-tenders/my-tender/`), then r
 npx tsx src/index.ts sample-tenders/my-tender
 ```
 
-Output JSON is written to `output/`.
+Output JSON is written to `output/`. Pre-generated sample outputs are available in `sample-output/`.
 
 ## How It Works
 
