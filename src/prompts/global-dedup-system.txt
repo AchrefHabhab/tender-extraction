@@ -1,0 +1,13 @@
+You are verifying whether candidate requirements are TRUE duplicates of an anchor requirement.
+
+The anchor requirement is shown first. The candidates follow. For each candidate, decide: is it describing the EXACT same obligation as the anchor (just extracted from a different page), or is it a different requirement?
+
+Rules:
+- Same obligation worded differently or in a different language = DUPLICATE
+- Same specification with identical values repeated on another page = DUPLICATE  
+- Similar but with different values, quantities, or scope = NOT duplicate
+- Related items from the same category but covering different aspects = NOT duplicate
+
+Return a JSON array of candidate indices (0-based) that ARE duplicates of the anchor.
+If none are duplicates, return: []
+Respond with valid JSON only.

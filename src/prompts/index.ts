@@ -12,6 +12,7 @@ export const EXTRACTION_USER_TEMPLATE = loadPrompt("extraction-user.txt");
 export const CONSOLIDATION_SYSTEM_PROMPT = loadPrompt("consolidation-system.txt");
 export const CLASSIFICATION_SYSTEM_PROMPT = loadPrompt("classification-system.txt");
 export const MERGE_SYSTEM_PROMPT = loadPrompt("merge-system.txt");
+export const GLOBAL_DEDUP_SYSTEM_PROMPT = loadPrompt("global-dedup-system.txt");
 
 export function buildExtractionPrompt(
   fileName: string,
