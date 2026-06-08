@@ -3,6 +3,7 @@ import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { ConsolidatedRequirement } from "./consolidator.js";
 import { CLASSIFICATION_SYSTEM_PROMPT } from "../prompts/index.js";
+import { type LocaleKey, toLocaleObject } from "../utils/index.js";
 
 interface Classification {
   level1: string;
@@ -10,14 +11,15 @@ interface Classification {
 }
 
 export async function buildTree(
-  requirements: ConsolidatedRequirement[]
+  requirements: ConsolidatedRequirement[],
+  locale: LocaleKey = "en"
 ): Promise<ProcurementMatchDeliverable[]> {
   if (requirements.length === 0) return [];
 
   logger.info(`Building tree from ${requirements.length} consolidated requirements`);
 
   const classifications = await classifyRequirements(requirements);
-  return constructTree(classifications, requirements);
+  return constructTree(classifications, requirements, locale);
 }
 
 async function classifyRequirements(
@@ -43,11 +45,12 @@ async function classifyRequirements(
 
 function constructTree(
   classifications: Classification[],
-  requirements: ConsolidatedRequirement[]
+  requirements: ConsolidatedRequirement[],
+  locale: LocaleKey
 ): ProcurementMatchDeliverable[] {
   return classifications.map((cat) => ({
     bulletPoint: cat.level1,
-    description: { en: cat.level1 },
+    description: toLocaleObject(cat.level1, locale),
     priority: "must" as const,
     confidence: null,
     equivalenceAllowed: null,
@@ -57,7 +60,7 @@ function constructTree(
     feedback: null,
     feedbackText: null,
     openQuestionId: null,
-    deliverableArray: cat.level2.map((sub) => buildLevel2(sub, requirements)),
+    deliverableArray: cat.level2.map((sub) => buildLevel2(sub, requirements, locale)),
     procurementDocumentChunkIdArray: [],
     workspaceDocumentChunkIdArray: [],
     citedProductIdArray: [],
@@ -67,15 +70,16 @@ function constructTree(
 
 function buildLevel2(
   sub: { name: string; requirementIndices: number[] },
-  requirements: ConsolidatedRequirement[]
+  requirements: ConsolidatedRequirement[],
+  locale: LocaleKey
 ): ProcurementMatchDeliverable {
   const leaves = sub.requirementIndices
     .filter((idx) => idx >= 0 && idx < requirements.length)
-    .map((idx) => buildLeaf(requirements[idx]));
+    .map((idx) => buildLeaf(requirements[idx], locale));
 
   return {
     bulletPoint: sub.name,
-    description: { en: sub.name },
+    description: toLocaleObject(sub.name, locale),
     priority: "must" as const,
     confidence: null,
     equivalenceAllowed: null,
@@ -93,10 +97,10 @@ function buildLevel2(
   };
 }
 
-function buildLeaf(req: ConsolidatedRequirement): ProcurementMatchDeliverable {
+function buildLeaf(req: ConsolidatedRequirement, locale: LocaleKey): ProcurementMatchDeliverable {
   return {
     bulletPoint: req.bulletPoint,
-    description: { en: req.description },
+    description: toLocaleObject(req.description, locale),
     priority: req.priority,
     confidence: req.confidence,
     equivalenceAllowed: req.equivalenceAllowed,

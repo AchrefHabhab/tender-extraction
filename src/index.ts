@@ -1,5 +1,5 @@
 import path from "path";
-import { logger, writeOutput } from "./utils/index.js";
+import { logger, writeOutput, detectLocale } from "./utils/index.js";
 import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
 import { extractRequirements, resolveReferences } from "./extractors/index.js";
 import { consolidateRequirements, buildTree, mergeTree } from "./builders/index.js";
@@ -28,7 +28,8 @@ async function main(): Promise<void> {
   const consolidated = await consolidateRequirements(resolved);
   logger.info(`${consolidated.length} requirements after consolidation`);
 
-  const rawTree = await buildTree(consolidated);
+  const locale = detectLocale(consolidated.map((r) => r.description));
+  const rawTree = await buildTree(consolidated, locale);
   const tree = await mergeTree(rawTree);
 
   const { valid, errors } = validateOutput(tree);
