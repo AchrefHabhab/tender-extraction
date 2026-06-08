@@ -1,7 +1,7 @@
 import path from "path";
 import { logger, writeOutput } from "./utils/index.js";
 import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
-import { extractRequirements } from "./extractors/index.js";
+import { extractRequirements, resolveReferences } from "./extractors/index.js";
 import { consolidateRequirements, buildTree, mergeTree } from "./builders/index.js";
 import { validateOutput } from "./validators/index.js";
 
@@ -22,9 +22,10 @@ async function main(): Promise<void> {
   logger.info(`${chunks.length} chunks ready for extraction`);
 
   const rawRequirements = await extractRequirements(chunks);
-  logger.info(`${rawRequirements.length} raw requirements extracted`);
+  const resolved = resolveReferences(rawRequirements, chunks);
+  logger.info(`${resolved.length} raw requirements extracted`);
 
-  const consolidated = await consolidateRequirements(rawRequirements);
+  const consolidated = await consolidateRequirements(resolved);
   logger.info(`${consolidated.length} requirements after consolidation`);
 
   const rawTree = await buildTree(consolidated);
