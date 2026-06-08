@@ -2,7 +2,7 @@ import { z } from "zod";
 import { DocumentChunk } from "../types/index.js";
 import { logger } from "../utils/logger.js";
 import { callLLM } from "./llm-client.js";
-import { EXTRACTION_SYSTEM_PROMPT, buildExtractionPrompt } from "./prompts.js";
+import { EXTRACTION_SYSTEM_PROMPT, buildExtractionPrompt } from "../prompts/index.js";
 
 const RawRequirementSchema = z.object({
   bulletPoint: z.string(),

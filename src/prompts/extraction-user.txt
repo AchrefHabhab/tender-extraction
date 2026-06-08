@@ -1,0 +1,21 @@
+Extract all procurement requirements from this tender document chunk.
+
+Document: {fileName}
+Page(s): {pageRef}
+
+---
+{text}
+---
+
+Return a JSON array of requirements:
+[
+  {
+    "bulletPoint": "...",
+    "description": "...",
+    "priority": "must" | "should" | "optional",
+    "equivalenceAllowed": true | false | null,
+    "confidence": "high" | "medium" | "low"
+  }
+]
+
+If no requirements are found in this chunk, return: []

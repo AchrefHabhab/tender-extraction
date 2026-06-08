@@ -2,33 +2,7 @@ import { ProcurementMatchDeliverable } from "../types/index.js";
 import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { ConsolidatedRequirement } from "./consolidator.js";
-
-const CLASSIFICATION_SYSTEM_PROMPT = `You are a procurement document classifier. Given a list of requirements from a tender, organize them into a 2-level category structure.
-
-Level 1: Broad categories (e.g., Project Management, Software Development, Hardware, Operations, Construction, etc.)
-Level 2: Sub-categories within each Level 1 (e.g., under Software Development: Backend, Frontend, QA)
-
-Rules:
-- Derive categories from the actual content — do not invent categories not supported by the requirements
-- Go shallow where the tender is simple, deeper where it is rich
-- Each requirement must belong to exactly one Level 2 group
-
-Return JSON:
-{
-  "categories": [
-    {
-      "level1": "category name",
-      "level2": [
-        {
-          "name": "sub-category name",
-          "requirementIndices": [0, 1, 2]
-        }
-      ]
-    }
-  ]
-}
-
-Respond with valid JSON only.`;
+import { CLASSIFICATION_SYSTEM_PROMPT } from "../prompts/index.js";
 
 interface Classification {
   level1: string;

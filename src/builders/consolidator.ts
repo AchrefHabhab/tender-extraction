@@ -1,6 +1,7 @@
 import { RawRequirement } from "../extractors/index.js";
 import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
+import { CONSOLIDATION_SYSTEM_PROMPT } from "../prompts/index.js";
 
 export interface ConsolidatedRequirement {
   bulletPoint: string;
@@ -10,22 +11,6 @@ export interface ConsolidatedRequirement {
   confidence: "high" | "medium" | "low";
   sourceChunkIds: string[];
 }
-
-const SIMILARITY_SYSTEM_PROMPT = `You are a strict deduplication engine for procurement requirements. You ONLY merge requirements that are exact duplicates — the same obligation extracted twice from overlapping text.
-
-MERGE only when:
-- The exact same sentence or specification appears on two pages (duplicate extraction)
-- One entry is a shortened version of another entry from the same specification
-
-DO NOT MERGE when:
-- Two items are related but describe different parts (e.g., "steel frame" and "steel door" are separate)
-- Two items are from the same category but specify different things
-- Two items have different measurements, materials, or quantities
-
-When in doubt, keep them separate. It is far better to have a duplicate than to lose a real requirement.
-
-Return a JSON array of groups. Each group contains the indices (0-based) of requirements that belong together. Most groups should contain only 1 index (no merge).
-Respond with valid JSON only.`;
 
 export async function consolidateRequirements(
   requirements: RawRequirement[]
@@ -58,7 +43,7 @@ async function consolidateBatch(batch: RawRequirement[]): Promise<ConsolidatedRe
 
 ${summaries.join("\n")}`;
 
-  const response = await callLLM(SIMILARITY_SYSTEM_PROMPT, userPrompt);
+  const response = await callLLM(CONSOLIDATION_SYSTEM_PROMPT, userPrompt);
   const groups = parseGroups(response, batch.length);
 
   return groups.map((group) => mergeGroup(group.map((idx) => batch[idx])));

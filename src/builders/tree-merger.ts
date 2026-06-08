@@ -1,27 +1,7 @@
 import { ProcurementMatchDeliverable } from "../types/index.js";
 import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
-
-const MERGE_SYSTEM_PROMPT = `You are a categorization expert. Given a list of category names, group the ones that represent the SAME or very similar category (even if in different languages or slightly different wording).
-
-Rules:
-- "Laboratory Equipment" and "Lab Equipment" = same
-- "Gasversorgung" and "Gas Supply" = same (different language)
-- "Fume Hoods" and "Fume Hoods and Ventilation" = same
-- Keep the most descriptive English name as the canonical name
-- Categories that are genuinely different should NOT be merged
-
-Return JSON:
-{
-  "groups": [
-    {
-      "canonicalName": "the best name for this group",
-      "members": ["original name 1", "original name 2"]
-    }
-  ]
-}
-
-Respond with valid JSON only.`;
+import { MERGE_SYSTEM_PROMPT } from "../prompts/index.js";
 
 interface MergeGroup {
   canonicalName: string;
