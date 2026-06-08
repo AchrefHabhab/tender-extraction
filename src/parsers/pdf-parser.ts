@@ -3,6 +3,7 @@ import path from "path";
 import { PDFParse } from "pdf-parse";
 import { logger } from "../utils/index.js";
 import { DocumentChunk, ParsedDocument } from "../types/index.js";
+import { ocrPage, destroyOcrWorker } from "./ocr-fallback.js";
 
 const MIN_CHARS_PER_PAGE = 50;
 
@@ -16,12 +17,26 @@ export async function parsePdf(filePath: string): Promise<ParsedDocument> {
 
   const chunks: DocumentChunk[] = [];
 
+  let ocrUsed = false;
+
   for (const page of textResult.pages) {
-    const text = page.text.trim();
+    let text = page.text.trim();
 
     if (text.length < MIN_CHARS_PER_PAGE) {
-      logger.warn(`Page ${page.num} of ${fileName} has very little text (${text.length} chars)`);
-      continue;
+      logger.warn(`Page ${page.num} of ${fileName} has very little text (${text.length} chars), attempting OCR`);
+      try {
+        text = await ocrPage(buffer as Buffer, page.num);
+        if (text.length >= MIN_CHARS_PER_PAGE) {
+          logger.info(`OCR recovered ${text.length} chars for page ${page.num}`);
+          ocrUsed = true;
+        } else {
+          logger.warn(`OCR also yielded insufficient text for page ${page.num}, skipping`);
+          continue;
+        }
+      } catch (err) {
+        logger.warn(`OCR failed for page ${page.num}: ${err instanceof Error ? err.message : String(err)}`);
+        continue;
+      }
     }
 
     chunks.push({
@@ -30,6 +45,10 @@ export async function parsePdf(filePath: string): Promise<ParsedDocument> {
       pageNumber: page.num,
       fileName,
     });
+  }
+
+  if (ocrUsed) {
+    await destroyOcrWorker();
   }
 
   logger.info(`Parsed ${fileName}: ${textResult.total} pages, ${chunks.length} chunks`);

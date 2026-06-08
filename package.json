@@ -25,6 +25,7 @@
     "dotenv": "^17.4.2",
     "openai": "^6.42.0",
     "pdf-parse": "^2.4.5",
+    "pdf-to-img": "^6.1.0",
     "tesseract.js": "^7.0.0",
     "typescript": "^6.0.3",
     "zod": "^4.4.3"
