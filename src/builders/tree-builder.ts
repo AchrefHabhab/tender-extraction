@@ -3,7 +3,9 @@ import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { ConsolidatedRequirement } from "./consolidator.js";
 import { CLASSIFICATION_SYSTEM_PROMPT } from "../prompts/index.js";
-import { type LocaleKey, toLocaleObject } from "../utils/index.js";
+import { type LocaleKey, toLocaleObject, pMap } from "../utils/index.js";
+
+const CLASSIFICATION_CONCURRENCY = 5;
 
 interface Classification {
   level1: string;
@@ -30,17 +32,19 @@ async function classifyRequirements(
   );
 
   const batches = createBatches(summaries, 50);
-  const allClassifications: Classification[] = [];
 
-  for (let i = 0; i < batches.length; i++) {
-    logger.info(`Classifying batch ${i + 1}/${batches.length}`);
-    const userPrompt = `Classify these requirements:\n\n${batches[i].join("\n")}`;
-    const response = await callLLM(CLASSIFICATION_SYSTEM_PROMPT, userPrompt);
-    const parsed = parseClassification(response);
-    allClassifications.push(...parsed);
-  }
+  const results = await pMap(
+    batches,
+    async (batch, i) => {
+      logger.info(`Classifying batch ${i + 1}/${batches.length}`);
+      const userPrompt = `Classify these requirements:\n\n${batch.join("\n")}`;
+      const response = await callLLM(CLASSIFICATION_SYSTEM_PROMPT, userPrompt);
+      return parseClassification(response);
+    },
+    CLASSIFICATION_CONCURRENCY
+  );
 
-  return mergeClassifications(allClassifications);
+  return mergeClassifications(results.flat());
 }
 
 function constructTree(

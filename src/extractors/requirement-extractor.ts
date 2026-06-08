@@ -1,8 +1,10 @@
 import { z } from "zod";
 import { DocumentChunk } from "../types/index.js";
-import { logger } from "../utils/logger.js";
+import { logger, pMap } from "../utils/index.js";
 import { callLLM } from "./llm-client.js";
 import { EXTRACTION_SYSTEM_PROMPT, buildExtractionPrompt } from "../prompts/index.js";
+
+const EXTRACTION_CONCURRENCY = 5;
 
 const RawRequirementSchema = z.object({
   bulletPoint: z.string(),
@@ -17,16 +19,18 @@ export type RawRequirement = z.infer<typeof RawRequirementSchema> & {
 };
 
 export async function extractRequirements(chunks: DocumentChunk[]): Promise<RawRequirement[]> {
-  const allRequirements: RawRequirement[] = [];
+  logger.info(`Extracting from ${chunks.length} chunks (concurrency: ${EXTRACTION_CONCURRENCY})`);
 
-  for (let i = 0; i < chunks.length; i++) {
-    const chunk = chunks[i];
-    logger.info(`Extracting chunk ${i + 1}/${chunks.length}: ${chunk.id}`);
+  const results = await pMap(
+    chunks,
+    async (chunk, i) => {
+      logger.info(`Extracting chunk ${i + 1}/${chunks.length}: ${chunk.id}`);
+      return extractFromChunk(chunk);
+    },
+    EXTRACTION_CONCURRENCY
+  );
 
-    const requirements = await extractFromChunk(chunk);
-    allRequirements.push(...requirements);
-  }
-
+  const allRequirements = results.flat();
   logger.info(`Extracted ${allRequirements.length} raw requirements from ${chunks.length} chunks`);
   return allRequirements;
 }

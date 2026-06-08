@@ -1,7 +1,9 @@
 import { RawRequirement } from "../extractors/index.js";
-import { logger } from "../utils/logger.js";
+import { logger, pMap } from "../utils/index.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { CONSOLIDATION_SYSTEM_PROMPT, GLOBAL_DEDUP_SYSTEM_PROMPT } from "../prompts/index.js";
+
+const CONSOLIDATION_CONCURRENCY = 5;
 
 export interface ConsolidatedRequirement {
   bulletPoint: string;
@@ -22,13 +24,17 @@ export async function consolidateRequirements(
   }
 
   const batches = createBatches(requirements, 30);
-  const consolidated: ConsolidatedRequirement[] = [];
 
-  for (let i = 0; i < batches.length; i++) {
-    logger.info(`Consolidating batch ${i + 1}/${batches.length} (${batches[i].length} requirements)`);
-    const merged = await consolidateBatch(batches[i]);
-    consolidated.push(...merged);
-  }
+  const results = await pMap(
+    batches,
+    async (batch, i) => {
+      logger.info(`Consolidating batch ${i + 1}/${batches.length} (${batch.length} requirements)`);
+      return consolidateBatch(batch);
+    },
+    CONSOLIDATION_CONCURRENCY
+  );
+
+  const consolidated = results.flat();
 
   logger.info(`Batch consolidation: ${requirements.length} → ${consolidated.length} requirements`);
 
