@@ -2,7 +2,7 @@ import path from "path";
 import { logger, writeOutput } from "./utils/index.js";
 import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
 import { extractRequirements } from "./extractors/index.js";
-import { consolidateRequirements, buildTree } from "./builders/index.js";
+import { consolidateRequirements, buildTree, mergeTree } from "./builders/index.js";
 
 async function main(): Promise<void> {
   const inputPath = process.argv[2];
@@ -26,7 +26,8 @@ async function main(): Promise<void> {
   const consolidated = await consolidateRequirements(rawRequirements);
   logger.info(`${consolidated.length} requirements after consolidation`);
 
-  const tree = await buildTree(consolidated);
+  const rawTree = await buildTree(consolidated);
+  const tree = await mergeTree(rawTree);
   const outputPath = await writeOutput(tree, tenderName);
 
   logger.info(`Pipeline complete. Output: ${outputPath}`);

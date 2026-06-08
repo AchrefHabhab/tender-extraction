@@ -11,15 +11,20 @@ export interface ConsolidatedRequirement {
   sourceChunkIds: string[];
 }
 
-const SIMILARITY_SYSTEM_PROMPT = `You are a procurement requirement deduplication engine. Given a list of requirements extracted from a tender document, group the ones that describe the SAME requirement (even if worded differently or found on different pages).
+const SIMILARITY_SYSTEM_PROMPT = `You are a strict deduplication engine for procurement requirements. You ONLY merge requirements that are exact duplicates — the same obligation extracted twice from overlapping text.
 
-Rules:
-- Two requirements are the same if they refer to the same obligation, deliverable, or specification
-- Different pages describing the same item = same requirement
-- A main description and its technical spec = same requirement
-- Different items that happen to be similar but are separate obligations = NOT the same
+MERGE only when:
+- The exact same sentence or specification appears on two pages (duplicate extraction)
+- One entry is a shortened version of another entry from the same specification
 
-Return a JSON array of groups. Each group contains the indices (0-based) of requirements that belong together.
+DO NOT MERGE when:
+- Two items are related but describe different parts (e.g., "steel frame" and "steel door" are separate)
+- Two items are from the same category but specify different things
+- Two items have different measurements, materials, or quantities
+
+When in doubt, keep them separate. It is far better to have a duplicate than to lose a real requirement.
+
+Return a JSON array of groups. Each group contains the indices (0-based) of requirements that belong together. Most groups should contain only 1 index (no merge).
 Respond with valid JSON only.`;
 
 export async function consolidateRequirements(
