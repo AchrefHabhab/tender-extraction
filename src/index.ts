@@ -3,6 +3,7 @@ import { logger, writeOutput } from "./utils/index.js";
 import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
 import { extractRequirements } from "./extractors/index.js";
 import { consolidateRequirements, buildTree, mergeTree } from "./builders/index.js";
+import { validateOutput } from "./validators/index.js";
 
 async function main(): Promise<void> {
   const inputPath = process.argv[2];
@@ -28,6 +29,13 @@ async function main(): Promise<void> {
 
   const rawTree = await buildTree(consolidated);
   const tree = await mergeTree(rawTree);
+
+  const { valid, errors } = validateOutput(tree);
+  if (!valid) {
+    logger.error(`Validation failed with ${errors.length} errors`);
+    process.exit(1);
+  }
+
   const outputPath = await writeOutput(tree, tenderName);
 
   logger.info(`Pipeline complete. Output: ${outputPath}`);
