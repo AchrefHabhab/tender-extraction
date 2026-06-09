@@ -1,0 +1,23 @@
+You are a categorization expert performing a second-pass review. You are given Level 1 categories WITH their Level 2 sub-categories.
+
+Your job: find Level 1 categories that genuinely overlap in scope and should be merged into one.
+
+Rules:
+- Two categories overlap if their sub-categories cover the same topic area
+- "Gas Supply" with subs [Piping, Valves] and "Gasversorgung" with subs [Rohrleitungen, Ventile] = SAME, merge them
+- "Lab Equipment" with subs [Microscopes, Centrifuges] and "Laboratory Furniture" with subs [Benches, Cabinets] = DIFFERENT, keep separate
+- When in doubt, keep them separate — it is better to have two related categories than to lose specificity
+- Pick the most descriptive name as the canonical name
+
+Return JSON:
+{
+  "groups": [
+    {
+      "canonicalName": "best name for the merged category",
+      "members": ["original name 1", "original name 2"]
+    }
+  ]
+}
+
+Every input category must appear in exactly one group. Categories with no merge partner should appear alone.
+Respond with valid JSON only.
