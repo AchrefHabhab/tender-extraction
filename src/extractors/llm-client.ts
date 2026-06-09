@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import { config } from "../utils/config.js";
 import { logger } from "../utils/logger.js";
 import { getCached, setCache } from "./cache.js";
+import { ChatRole } from "../types/index.js";
 
 const client = new OpenAI({
   apiKey: config.llmApiKey,
@@ -24,8 +25,8 @@ export async function callLLM(systemPrompt: string, userPrompt: string): Promise
       const response = await client.chat.completions.create({
         model: config.llmModel,
         messages: [
-          { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt },
+          { role: ChatRole.System, content: systemPrompt },
+          { role: ChatRole.User, content: userPrompt },
         ],
         temperature: 0.1,
       });

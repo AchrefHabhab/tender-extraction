@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { logger } from "../utils/logger.js";
+import { Priority, Confidence, Fulfillable, DeliverableStatus, Feedback } from "../types/index.js";
 
 const LocaleObjectSchema = z.record(z.string(), z.string());
 
@@ -7,19 +8,13 @@ const DeliverableSchema: z.ZodType<unknown> = z.lazy(() =>
   z.object({
     bulletPoint: z.string().min(1),
     description: LocaleObjectSchema,
-    priority: z.enum(["must", "should", "optional"]),
-    confidence: z.enum(["high", "medium", "low"]).nullable(),
+    priority: z.nativeEnum(Priority),
+    confidence: z.nativeEnum(Confidence).nullable(),
     equivalenceAllowed: z.boolean().nullable(),
-    fullfillable: z.enum(["yes", "no", "maybe"]).nullable(),
-    status: z.enum([
-      "waitingForAnalysis",
-      "waitingForAnswer",
-      "waitingForAnswerPropagation",
-      "waitingForReview",
-      "userDefined",
-    ]),
+    fullfillable: z.nativeEnum(Fulfillable).nullable(),
+    status: z.nativeEnum(DeliverableStatus),
     aiReasoning: LocaleObjectSchema.nullable(),
-    feedback: z.enum(["good", "bad"]).nullable(),
+    feedback: z.nativeEnum(Feedback).nullable(),
     feedbackText: z.string().nullable(),
     openQuestionId: z.string().nullable(),
     deliverableArray: z.array(DeliverableSchema),

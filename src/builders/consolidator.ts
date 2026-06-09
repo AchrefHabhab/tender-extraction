@@ -2,15 +2,16 @@ import { RawRequirement } from "../extractors/index.js";
 import { logger, pMap } from "../utils/index.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { CONSOLIDATION_SYSTEM_PROMPT, GLOBAL_DEDUP_SYSTEM_PROMPT } from "../prompts/index.js";
+import { Priority, Confidence } from "../types/index.js";
 
 const CONSOLIDATION_CONCURRENCY = 5;
 
 export interface ConsolidatedRequirement {
   bulletPoint: string;
   description: string;
-  priority: "must" | "should" | "optional";
+  priority: Priority;
   equivalenceAllowed: boolean | null;
-  confidence: "high" | "medium" | "low";
+  confidence: Confidence;
   sourceChunkIds: string[];
 }
 
@@ -104,10 +105,10 @@ function mergeGroup(group: RawRequirement[]): ConsolidatedRequirement {
   };
 }
 
-function getHighestPriority(priorities: Array<"must" | "should" | "optional">): "must" | "should" | "optional" {
-  if (priorities.includes("must")) return "must";
-  if (priorities.includes("should")) return "should";
-  return "optional";
+function getHighestPriority(priorities: Priority[]): Priority {
+  if (priorities.includes(Priority.Must)) return Priority.Must;
+  if (priorities.includes(Priority.Should)) return Priority.Should;
+  return Priority.Optional;
 }
 
 function toConsolidated(req: RawRequirement): ConsolidatedRequirement {

@@ -1,4 +1,4 @@
-import { ProcurementMatchDeliverable } from "../types/index.js";
+import { ProcurementMatchDeliverable, Priority, DeliverableStatus } from "../types/index.js";
 import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { ConsolidatedRequirement } from "./consolidator.js";
@@ -55,11 +55,11 @@ function constructTree(
   return classifications.map((cat) => ({
     bulletPoint: cat.level1,
     description: toLocaleObject(cat.level1, locale),
-    priority: "must" as const,
+    priority: Priority.Must,
     confidence: null,
     equivalenceAllowed: null,
     fullfillable: null,
-    status: "waitingForAnalysis" as const,
+    status: DeliverableStatus.WaitingForAnalysis,
     aiReasoning: null,
     feedback: null,
     feedbackText: null,
@@ -84,11 +84,11 @@ function buildLevel2(
   return {
     bulletPoint: sub.name,
     description: toLocaleObject(sub.name, locale),
-    priority: "must" as const,
+    priority: Priority.Must,
     confidence: null,
     equivalenceAllowed: null,
     fullfillable: null,
-    status: "waitingForAnalysis" as const,
+    status: DeliverableStatus.WaitingForAnalysis,
     aiReasoning: null,
     feedback: null,
     feedbackText: null,
@@ -109,7 +109,7 @@ function buildLeaf(req: ConsolidatedRequirement, locale: LocaleKey): Procurement
     confidence: req.confidence,
     equivalenceAllowed: req.equivalenceAllowed,
     fullfillable: null,
-    status: "waitingForAnalysis" as const,
+    status: DeliverableStatus.WaitingForAnalysis,
     aiReasoning: null,
     feedback: null,
     feedbackText: null,

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { DocumentChunk } from "../types/index.js";
+import { DocumentChunk, Priority, Confidence } from "../types/index.js";
 import { logger, pMap } from "../utils/index.js";
 import { callLLM } from "./llm-client.js";
 import { EXTRACTION_SYSTEM_PROMPT, buildExtractionPrompt } from "../prompts/index.js";
@@ -9,9 +9,9 @@ const EXTRACTION_CONCURRENCY = 5;
 const RawRequirementSchema = z.object({
   bulletPoint: z.string(),
   description: z.string(),
-  priority: z.enum(["must", "should", "optional"]),
+  priority: z.nativeEnum(Priority),
   equivalenceAllowed: z.boolean().nullable(),
-  confidence: z.enum(["high", "medium", "low"]),
+  confidence: z.nativeEnum(Confidence),
 });
 
 export type RawRequirement = z.infer<typeof RawRequirementSchema> & {
