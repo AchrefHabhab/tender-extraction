@@ -2,7 +2,7 @@ import { ProcurementMatchDeliverable, Priority, DeliverableStatus } from "../typ
 import { logger } from "../utils/logger.js";
 import { callLLM } from "../extractors/llm-client.js";
 import { ConsolidatedRequirement } from "./consolidator.js";
-import { CLASSIFICATION_SYSTEM_PROMPT } from "../prompts/index.js";
+import { CLASSIFICATION_SYSTEM_PROMPT, CATEGORY_DISCOVERY_SYSTEM_PROMPT } from "../prompts/index.js";
 import { type LocaleKey, toLocaleObject, pMap } from "../utils/index.js";
 
 const CLASSIFICATION_CONCURRENCY = 5;
@@ -27,17 +27,23 @@ export async function buildTree(
 async function classifyRequirements(
   requirements: ConsolidatedRequirement[]
 ): Promise<Classification[]> {
+  const titles = requirements.map((r) => r.bulletPoint);
+
+  const categories = await discoverCategories(titles);
+  logger.info(`Discovered ${categories.length} Level 1 categories: ${categories.join(", ")}`);
+
   const summaries = requirements.map(
     (r, i) => `[${i}] [${r.priority}] ${r.bulletPoint}: ${r.description.substring(0, 100)}`
   );
 
   const batches = createBatches(summaries, 50);
+  const categoryList = categories.map((c, i) => `${i + 1}. ${c}`).join("\n");
 
   const results = await pMap(
     batches,
     async (batch, i) => {
       logger.info(`Classifying batch ${i + 1}/${batches.length}`);
-      const userPrompt = `Classify these requirements:\n\n${batch.join("\n")}`;
+      const userPrompt = `Level 1 categories (use ONLY these):\n${categoryList}\n\nRequirements to classify:\n${batch.join("\n")}`;
       const response = await callLLM(CLASSIFICATION_SYSTEM_PROMPT, userPrompt);
       return parseClassification(response);
     },
@@ -45,6 +51,24 @@ async function classifyRequirements(
   );
 
   return mergeClassifications(results.flat());
+}
+
+async function discoverCategories(titles: string[]): Promise<string[]> {
+  const titleList = titles.map((t, i) => `${i + 1}. ${t}`).join("\n");
+  const userPrompt = `Derive Level 1 categories from these ${titles.length} requirement titles:\n\n${titleList}`;
+  const response = await callLLM(CATEGORY_DISCOVERY_SYSTEM_PROMPT, userPrompt);
+
+  try {
+    const cleaned = response.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+    const parsed = JSON.parse(cleaned) as { categories: string[] };
+    if (Array.isArray(parsed.categories) && parsed.categories.length > 0) {
+      return parsed.categories;
+    }
+  } catch {
+    logger.warn("Failed to parse category discovery response, using fallback");
+  }
+
+  return ["General Requirements"];
 }
 
 function constructTree(
@@ -126,7 +150,13 @@ function parseClassification(response: string): Classification[] {
   try {
     const cleaned = response.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
     const parsed = JSON.parse(cleaned) as { categories: Classification[] };
-    return parsed.categories ?? [];
+    const categories = parsed.categories ?? [];
+    return categories.map((cat) => ({
+      level1: cat.level1,
+      level2: (cat.level2 ?? []).filter(
+        (sub) => sub.name && Array.isArray(sub.requirementIndices)
+      ),
+    })).filter((cat) => cat.level2.length > 0);
   } catch {
     logger.warn("Failed to parse classification response");
     return [];

@@ -1,18 +1,20 @@
-You are a procurement document classifier. Given a list of requirements from a tender, organize them into a 2-level category structure.
+You are a procurement document classifier. You are given:
+1. A FIXED set of Level 1 categories (provided in the prompt)
+2. A list of requirements to classify
 
-Level 1: Broad categories (e.g., Project Management, Software Development, Hardware, Operations, Construction, etc.)
-Level 2: Sub-categories within each Level 1 (e.g., under Software Development: Backend, Frontend, QA)
+Your job: assign each requirement to one of the given Level 1 categories and group them into Level 2 sub-categories.
 
 Rules:
-- Derive categories from the actual content — do not invent categories not supported by the requirements
-- Go shallow where the tender is simple, deeper where it is rich
+- Use ONLY the provided Level 1 categories. Do NOT invent new ones.
+- Create Level 2 sub-categories as needed to organize requirements within each Level 1
 - Each requirement must belong to exactly one Level 2 group
+- If a requirement does not fit any category well, assign it to the closest match
 
 Return JSON:
 {
   "categories": [
     {
-      "level1": "category name",
+      "level1": "one of the provided category names",
       "level2": [
         {
           "name": "sub-category name",

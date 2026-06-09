@@ -14,6 +14,7 @@ export const CLASSIFICATION_SYSTEM_PROMPT = loadPrompt("classification-system.tx
 export const MERGE_SYSTEM_PROMPT = loadPrompt("merge-system.txt");
 export const GLOBAL_DEDUP_SYSTEM_PROMPT = loadPrompt("global-dedup-system.txt");
 export const DEEP_MERGE_SYSTEM_PROMPT = loadPrompt("deep-merge-system.txt");
+export const CATEGORY_DISCOVERY_SYSTEM_PROMPT = loadPrompt("category-discovery-system.txt");
 
 export function buildExtractionPrompt(
   fileName: string,
