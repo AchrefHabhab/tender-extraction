@@ -1,0 +1,7 @@
+node_modules
+dist
+output
+.cache
+.env
+*.pdf
+.DS_Store

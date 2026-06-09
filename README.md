@@ -19,6 +19,13 @@ npx tsx src/index.ts sample-tenders/my-tender
 
 Output JSON is written to `output/`. Pre-generated sample outputs are available in `sample-output/`.
 
+### Docker
+
+```bash
+docker build -t tender-extraction .
+docker run --env-file .env -v ./sample-tenders:/app/sample-tenders -v ./output:/app/output tender-extraction sample-tenders/my-tender
+```
+
 ## How It Works
 
 ```
