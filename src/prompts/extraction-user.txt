@@ -7,7 +7,16 @@ Page(s): {pageRef}
 {text}
 ---
 
-Return a JSON array of requirements:
+Return a JSON array. Examples of correct priority and confidence assignments:
+- "The contractor shall provide certified fire safety equipment" → priority: "must", confidence: "high"
+- "Experience with similar projects is recommended" → priority: "should", confidence: "high"
+- "Additional training sessions may be offered" → priority: "optional", confidence: "high"
+- "Adequate staffing levels should be ensured" → priority: "should", confidence: "medium" (vague scope)
+- "Der Bieter muss ein Sicherheitskonzept vorlegen" → priority: "must", confidence: "high"
+- "Es wird empfohlen, regionale Anbieter einzubeziehen" → priority: "should", confidence: "medium"
+- "Zusätzliche Leistungen können angeboten werden" → priority: "optional", confidence: "high"
+- "Es ist davon auszugehen, dass entsprechende Maßnahmen erforderlich sind" → priority: "should", confidence: "low" (inferred, not stated)
+
 [
   {
     "bulletPoint": "...",
