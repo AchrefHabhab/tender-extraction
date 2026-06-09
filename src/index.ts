@@ -4,6 +4,7 @@ import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
 import { extractRequirements, resolveReferences } from "./extractors/index.js";
 import { consolidateRequirements, linkRelatedRequirements, buildTree, mergeTree } from "./builders/index.js";
 import { validateOutput } from "./validators/index.js";
+import { computeMetrics } from "./metrics/index.js";
 
 async function main(): Promise<void> {
   const inputPath = process.argv[2];
@@ -40,6 +41,9 @@ async function main(): Promise<void> {
     logger.error(`Validation failed with ${errors.length} errors`);
     process.exit(1);
   }
+
+  const metrics = computeMetrics(tree, chunks.length);
+  logger.info(`Metrics: L1=${metrics.level1Count} leaves=${metrics.leafCount} coverage=${(metrics.sourceCoverage * 100).toFixed(1)}% consolidation=${(metrics.consolidationRate * 100).toFixed(1)}% priorityH=${metrics.priorityEntropy.toFixed(2)} balance=${metrics.treeBalance.toFixed(2)}`);
 
   const outputPath = await writeOutput(tree, tenderName);
 
