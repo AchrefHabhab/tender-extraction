@@ -2,7 +2,7 @@ import path from "path";
 import { logger, writeOutput, detectLocale } from "./utils/index.js";
 import { parseTenderFolder, chunkDocuments } from "./parsers/index.js";
 import { extractRequirements, resolveReferences } from "./extractors/index.js";
-import { consolidateRequirements, buildTree, mergeTree } from "./builders/index.js";
+import { consolidateRequirements, linkRelatedRequirements, buildTree, mergeTree } from "./builders/index.js";
 import { validateOutput } from "./validators/index.js";
 
 async function main(): Promise<void> {
@@ -28,8 +28,11 @@ async function main(): Promise<void> {
   const consolidated = await consolidateRequirements(resolved);
   logger.info(`${consolidated.length} requirements after consolidation`);
 
-  const locale = detectLocale(consolidated.map((r) => r.description));
-  const rawTree = await buildTree(consolidated, locale);
+  const linked = await linkRelatedRequirements(consolidated);
+  logger.info(`${linked.length} requirements after linking`);
+
+  const locale = detectLocale(linked.map((r) => r.description));
+  const rawTree = await buildTree(linked, locale);
   const tree = await mergeTree(rawTree);
 
   const { valid, errors } = validateOutput(tree);
