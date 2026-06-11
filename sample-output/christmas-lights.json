@@ -1,8 +1,8 @@
 [
   {
-    "bulletPoint": "Health and Safety",
+    "bulletPoint": "Health and Safety Compliance",
     "description": {
-      "en": "Health and Safety"
+      "en": "Health and Safety Compliance"
     },
     "priority": "must",
     "confidence": null,
@@ -15,9 +15,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Compliance and Insurance",
+        "bulletPoint": "General H&S Compliance",
         "description": {
-          "en": "Compliance and Insurance"
+          "en": "General H&S Compliance"
         },
         "priority": "must",
         "confidence": null,
@@ -74,7 +74,29 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Produce H&S information prior to installation",
+            "bulletPoint": "Adherence to wiring regulations",
+            "description": {
+              "en": "The Contractor must adhere to the relevant codes of practice and regulations. In particular, the erection, testing and maintenance of the installation must be carried out in accordance with the latest Wiring Regulations (BS 7671) and undertaken by a competent person as laid out in those regulations."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": false,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Provide H&S information prior to installation",
             "description": {
               "en": "The successful contractor will be expected to produce a Health & Safety Information prior to installation. This will include: Risk Assessment, Method Statement, Schedule of Works, Any other relevant documents such as General Health & Safety at Work Policy, accreditation certificates and staff training certificates."
             },
@@ -96,34 +118,12 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Adequate public liability insurance",
+            "bulletPoint": "Minimal disruption to traffic and environment",
             "description": {
-              "en": "It is a requirement that the contractor is adequately insured, with public liability cover. A copy of your current insurance certificate must be included in with tender response."
+              "en": "The work must be undertaken in a manner that causes little disruption to traffic both vehicular and pedestrian, as well as with consideration for the environment."
             },
             "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Submit current public liability certificate",
-            "description": {
-              "en": "Current public liability certificate"
-            },
-            "priority": "must",
-            "confidence": "high",
+            "confidence": "medium",
             "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
@@ -152,9 +152,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Technical Standards",
+    "bulletPoint": "Insurance and Certification",
     "description": {
-      "en": "Technical Standards"
+      "en": "Insurance and Certification"
     },
     "priority": "must",
     "confidence": null,
@@ -167,9 +167,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Electrical Regulations",
+        "bulletPoint": "Insurance and Certificates",
         "description": {
-          "en": "Electrical Regulations"
+          "en": "Insurance and Certificates"
         },
         "priority": "must",
         "confidence": null,
@@ -182,13 +182,13 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Adherence to Wiring Regulations BS 7671",
+            "bulletPoint": "Adequate insurance with public liability",
             "description": {
-              "en": "The Contractor must adhere to the relevant codes of practice and regulations. In particular, the erection, testing and maintenance of the installation must be carried out in accordance with the latest Wiring Regulations (BS 7671) and undertaken by a competent person as laid out in those regulations."
+              "en": "It is a requirement that the contractor is adequately insured, with public liability cover. A copy of your current insurance certificate must be included in with tender response."
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -204,9 +204,9 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Electric testing of lights to current standards",
+            "bulletPoint": "Provide current public liability certificate",
             "description": {
-              "en": "Electric testing of lights to current standards"
+              "en": "Current public liability certificate"
             },
             "priority": "must",
             "confidence": "high",
@@ -226,29 +226,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Testing of all electric feeder pillars",
-            "description": {
-              "en": "Testing of all electric feeder pillars"
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Submit Highway Electrical Registration Scheme",
+            "bulletPoint": "Provide Highway Electrical Registration Scheme",
             "description": {
               "en": "Highway Electrical Registration Scheme"
             },
@@ -282,9 +260,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Installation",
+    "bulletPoint": "Tender Submission and Procedure",
     "description": {
-      "en": "Installation"
+      "en": "Tender Submission and Procedure"
     },
     "priority": "must",
     "confidence": null,
@@ -297,9 +275,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Lighting Installation",
+        "bulletPoint": "Tender Process",
         "description": {
-          "en": "Lighting Installation"
+          "en": "Tender Process"
         },
         "priority": "must",
         "confidence": null,
@@ -312,7 +290,203 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Install pea lights in memorial garden",
+            "bulletPoint": "Site visit prior to tender submission",
+            "description": {
+              "en": "It will be expected that the Contractor, prior to submitting a tender will have made any necessary site visits and satisfied their self of any access arrangements and any other necessary information required and that the tender is fully inclusive of all costs."
+            },
+            "priority": "should",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Compliance with all written requirements",
+            "description": {
+              "en": "The contract will be awarded to the company that complies with all written requirements, has satisfactory references and offers the best value for money."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Follow tender procedure Standing Order 17",
+            "description": {
+              "en": "All invitations to tender are subject to the Town Council's Standing Order number 17 and the terms of the Bribery Act 2010."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "No contact with councillors outside process",
+            "description": {
+              "en": "No contractor shall contact councillors or staff to encourage or support their tender outside the prescribed process."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Submit tender in sealed marked envelope",
+            "description": {
+              "en": "Tenders are to be submitted in writing in a sealed marked envelope addressed to the Town Clerk. The envelope should be clearly marked 'Tender'."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Tenders opened after deadline by Clerk",
+            "description": {
+              "en": "Tenders shall be opened by the Town Clerk in the presence of at least two councillors after the deadline for submission of tenders has passed."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Tenders considered at properly convened meeting",
+            "description": {
+              "en": "Tenders will be reported to and considered by the Town Council at a properly convened meeting."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Installation and Testing",
+    "description": {
+      "en": "Installation and Testing"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Installation Tasks",
+        "description": {
+          "en": "Installation Tasks"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Install pea lights to memorial garden",
             "description": {
               "en": "Install and activate 23 sets of pea lights to memorial garden"
             },
@@ -356,7 +530,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Install pea lights to tree on square",
+            "bulletPoint": "Install pea lights to tree on the square",
             "description": {
               "en": "Install and activate 1 set of pea lights to the tree on the square"
             },
@@ -466,7 +640,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Install snow fall column motifs",
+            "bulletPoint": "Installation of snow fall column motifs",
             "description": {
               "en": "Installation of 2x snow fall column motifs"
             },
@@ -492,32 +666,11 @@
         "workspaceDocumentChunkIdArray": [],
         "citedProductIdArray": [],
         "citedPersonIdArray": []
-      }
-    ],
-    "procurementDocumentChunkIdArray": [],
-    "workspaceDocumentChunkIdArray": [],
-    "citedProductIdArray": [],
-    "citedPersonIdArray": []
-  },
-  {
-    "bulletPoint": "Testing and Maintenance",
-    "description": {
-      "en": "Testing and Maintenance"
-    },
-    "priority": "must",
-    "confidence": null,
-    "equivalenceAllowed": null,
-    "fullfillable": null,
-    "status": "waitingForAnalysis",
-    "aiReasoning": null,
-    "feedback": null,
-    "feedbackText": null,
-    "openQuestionId": null,
-    "deliverableArray": [
+      },
       {
-        "bulletPoint": "Pre-installation Testing",
+        "bulletPoint": "Testing and Checks",
         "description": {
-          "en": "Pre-installation Testing"
+          "en": "Testing and Checks"
         },
         "priority": "must",
         "confidence": null,
@@ -529,6 +682,50 @@
         "feedbackText": null,
         "openQuestionId": null,
         "deliverableArray": [
+          {
+            "bulletPoint": "Installation testing start date",
+            "description": {
+              "en": "Installation testing must begin on 1 November 2026."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Electric testing of lights to current standards",
+            "description": {
+              "en": "Electric testing of lights to current standards"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
           {
             "bulletPoint": "Check of all anchor points",
             "description": {
@@ -552,9 +749,9 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Cost of replacement anchor points",
+            "bulletPoint": "Testing of all electric feeder pillars",
             "description": {
-              "en": "Cost of any replacement anchor points"
+              "en": "Testing of all electric feeder pillars"
             },
             "priority": "must",
             "confidence": "high",
@@ -596,7 +793,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Lights fully functional before installation",
+            "bulletPoint": "Lights fully functioning prior to installation",
             "description": {
               "en": "All lights and features must be fully functioning prior to installation."
             },
@@ -622,11 +819,32 @@
         "workspaceDocumentChunkIdArray": [],
         "citedProductIdArray": [],
         "citedPersonIdArray": []
-      },
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Lighting and Decorative Installations",
+    "description": {
+      "en": "Lighting and Decorative Installations"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
       {
-        "bulletPoint": "Post-installation Testing",
+        "bulletPoint": "Lighting Operations",
         "description": {
-          "en": "Post-installation Testing"
+          "en": "Lighting Operations"
         },
         "priority": "must",
         "confidence": null,
@@ -639,9 +857,9 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Installation testing start date",
+            "bulletPoint": "Lights operational before switch-on",
             "description": {
-              "en": "Installation testing must begin on 1 November 2026."
+              "en": "The lights must be in working order in good time, and no later than ONE WEEK PRIOR to the notified switch-on date of Saturday 28 November 2026."
             },
             "priority": "must",
             "confidence": "high",
@@ -661,7 +879,71 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Scheduled maintenance run-throughs",
+            "bulletPoint": "Automatic timer settings for lights",
+            "description": {
+              "en": "Thereafter the lights need to be set to their automatic timers which result in their coming on at 4pm and going off at 10pm weekdays, and 4pm – 11pm weekends."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Maintenance and Call-Outs",
+    "description": {
+      "en": "Maintenance and Call-Outs"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Scheduled Maintenance",
+        "description": {
+          "en": "Scheduled Maintenance"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Two scheduled maintenance run throughs",
             "description": {
               "en": "We require two scheduled run throughs of the display to check everything is functioning properly and to attend to any minor faults."
             },
@@ -711,9 +993,9 @@
         "citedPersonIdArray": []
       },
       {
-        "bulletPoint": "Fault Response",
+        "bulletPoint": "Call-Outs and Faults",
         "description": {
-          "en": "Fault Response"
+          "en": "Call-Outs and Faults"
         },
         "priority": "must",
         "confidence": null,
@@ -826,9 +1108,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Operations",
+    "bulletPoint": "Dismantling and Removal",
     "description": {
-      "en": "Operations"
+      "en": "Dismantling and Removal"
     },
     "priority": "must",
     "confidence": null,
@@ -841,139 +1123,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Switch-on Event",
+        "bulletPoint": "Dismantling",
         "description": {
-          "en": "Switch-on Event"
-        },
-        "priority": "must",
-        "confidence": null,
-        "equivalenceAllowed": null,
-        "fullfillable": null,
-        "status": "waitingForAnalysis",
-        "aiReasoning": null,
-        "feedback": null,
-        "feedbackText": null,
-        "openQuestionId": null,
-        "deliverableArray": [
-          {
-            "bulletPoint": "Lights operational by switch-on date",
-            "description": {
-              "en": "The lights must be in working order in good time, and no later than ONE WEEK PRIOR to the notified switch-on date of Saturday 28 November 2026."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Contractor present at switch-on event",
-            "description": {
-              "en": "The contractor must be present on the day of the switch-on Saturday 28 November 2026 to manually switch on the lights after a countdown."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Attendance at switch on event",
-            "description": {
-              "en": "Attendance at switch on event"
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          }
-        ],
-        "procurementDocumentChunkIdArray": [],
-        "workspaceDocumentChunkIdArray": [],
-        "citedProductIdArray": [],
-        "citedPersonIdArray": []
-      },
-      {
-        "bulletPoint": "Timers and Scheduling",
-        "description": {
-          "en": "Timers and Scheduling"
-        },
-        "priority": "must",
-        "confidence": null,
-        "equivalenceAllowed": null,
-        "fullfillable": null,
-        "status": "waitingForAnalysis",
-        "aiReasoning": null,
-        "feedback": null,
-        "feedbackText": null,
-        "openQuestionId": null,
-        "deliverableArray": [
-          {
-            "bulletPoint": "Automatic timer settings for lights",
-            "description": {
-              "en": "Thereafter the lights need to be set to their automatic timers which result in their coming on at 4pm and going off at 10pm weekdays, and 4pm – 11pm weekends."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          }
-        ],
-        "procurementDocumentChunkIdArray": [],
-        "workspaceDocumentChunkIdArray": [],
-        "citedProductIdArray": [],
-        "citedPersonIdArray": []
-      },
-      {
-        "bulletPoint": "Dismantling and Removal",
-        "description": {
-          "en": "Dismantling and Removal"
+          "en": "Dismantling"
         },
         "priority": "must",
         "confidence": null,
@@ -1042,9 +1194,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Tender and Procurement",
+    "bulletPoint": "Cost and Budget",
     "description": {
-      "en": "Tender and Procurement"
+      "en": "Cost and Budget"
     },
     "priority": "must",
     "confidence": null,
@@ -1057,9 +1209,289 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Submission Requirements",
+        "bulletPoint": "Pricing and Payment",
         "description": {
-          "en": "Submission Requirements"
+          "en": "Pricing and Payment"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Price fit within budget",
+            "description": {
+              "en": "Price fit within the budget (25% evaluation weight)."
+            },
+            "priority": "should",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Payment on satisfactory completion",
+            "description": {
+              "en": "Payment for the completed project will be made to the Contractor on satisfactory completion of works."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Cost of replacement anchor points",
+            "description": {
+              "en": "Cost of any replacement anchor points"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Cost all items individually",
+            "description": {
+              "en": "To cost all items individually."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Quality and Performance",
+    "description": {
+      "en": "Quality and Performance"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Quality and Experience",
+        "description": {
+          "en": "Quality and Experience"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Demonstrated ability for similar projects",
+            "description": {
+              "en": "Demonstrated ability to deliver similar projects to a high quality (25% evaluation weight)."
+            },
+            "priority": "should",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Quality and value for money",
+            "description": {
+              "en": "Quality and value for money (30% evaluation weight)."
+            },
+            "priority": "should",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Local Resources and Community Engagement",
+    "description": {
+      "en": "Local Resources and Community Engagement"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Local Resources",
+        "description": {
+          "en": "Local Resources"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Use of local resources and skills",
+            "description": {
+              "en": "Use of local resources and skills (20% evaluation weight)."
+            },
+            "priority": "should",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Site Visits and Pre-Installation Requirements",
+    "description": {
+      "en": "Site Visits and Pre-Installation Requirements"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Site Visits",
+        "description": {
+          "en": "Site Visits"
         },
         "priority": "must",
         "confidence": null,
@@ -1092,11 +1524,53 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Variations and Notifications",
+    "description": {
+      "en": "Variations and Notifications"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Variations",
+        "description": {
+          "en": "Variations"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Cost all items individually",
+            "bulletPoint": "Variations notified and agreed in writing",
             "description": {
-              "en": "To cost all items individually."
+              "en": "Any variations to the contract will be notified to the Contractor by the Town Clerk and agreed in writing between the two parties."
             },
             "priority": "must",
             "confidence": "high",
@@ -1109,117 +1583,7 @@
             "openQuestionId": null,
             "deliverableArray": [],
             "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Follow tender procedure and Standing Orders",
-            "description": {
-              "en": "All invitations to tender are subject to the Town Council's Standing Order number 17 and the terms of the Bribery Act 2010."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "No contact with councillors or staff",
-            "description": {
-              "en": "No contractor shall contact councillors or staff to encourage or support their tender outside the prescribed process."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Submit tender in sealed marked envelope",
-            "description": {
-              "en": "Tenders are to be submitted in writing in a sealed marked envelope addressed to the Town Clerk. The envelope should be clearly marked 'Tender'."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Tenders opened after deadline by Clerk and councillors",
-            "description": {
-              "en": "Tenders shall be opened by the Town Clerk in the presence of at least two councillors after the deadline for submission of tenders has passed."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Tenders reported to Town Council meeting",
-            "description": {
-              "en": "Tenders will be reported to and considered by the Town Council at a properly convened meeting."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": null,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-1-2"
             ],
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
@@ -1238,9 +1602,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Site and Public Impact",
+    "bulletPoint": "Switch-On and Event Attendance",
     "description": {
-      "en": "Site and Public Impact"
+      "en": "Switch-On and Event Attendance"
     },
     "priority": "must",
     "confidence": null,
@@ -1253,9 +1617,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Disruption Minimization",
+        "bulletPoint": "Switch-On and Event",
         "description": {
-          "en": "Disruption Minimization"
+          "en": "Switch-On and Event"
         },
         "priority": "must",
         "confidence": null,
@@ -1268,9 +1632,31 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Minimal disruption to traffic and environment",
+            "bulletPoint": "Contractor presence at switch-on",
             "description": {
-              "en": "The work must be undertaken in a manner that causes little disruption to traffic both vehicular and pedestrian, as well as with consideration for the environment."
+              "en": "The contractor must be present on the day of the switch-on Saturday 28 November 2026 to manually switch on the lights after a countdown."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "Tender_For_Christmas_Lights_Installation_2026.pdf:page-3-4"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Attendance at switch on event",
+            "description": {
+              "en": "Attendance at switch on event"
             },
             "priority": "must",
             "confidence": "high",

@@ -54,8 +54,13 @@ async function classifyRequirements(
 }
 
 async function discoverCategories(titles: string[]): Promise<string[]> {
-  const titleList = titles.map((t, i) => `${i + 1}. ${t}`).join("\n");
-  const userPrompt = `Derive Level 1 categories from these ${titles.length} requirement titles:\n\n${titleList}`;
+  const MAX_TITLES = 500;
+  const sampled = titles.length <= MAX_TITLES
+    ? titles
+    : sampleEvenly(titles, MAX_TITLES);
+
+  const titleList = sampled.map((t, i) => `${i + 1}. ${t}`).join("\n");
+  const userPrompt = `Derive Level 1 categories from these ${sampled.length} requirement titles (sampled from ${titles.length} total):\n\n${titleList}`;
   const response = await callLLM(CATEGORY_DISCOVERY_SYSTEM_PROMPT, userPrompt);
 
   try {
@@ -184,4 +189,13 @@ function createBatches<T>(items: T[], size: number): T[][] {
     batches.push(items.slice(i, i + size));
   }
   return batches;
+}
+
+function sampleEvenly<T>(items: T[], count: number): T[] {
+  const step = items.length / count;
+  const result: T[] = [];
+  for (let i = 0; i < count; i++) {
+    result.push(items[Math.floor(i * step)]);
+  }
+  return result;
 }

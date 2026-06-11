@@ -50,7 +50,11 @@ async function main(): Promise<void> {
   logger.info(`Pipeline complete. Output: ${outputPath}`);
 }
 
-main().catch((err) => {
-  logger.error("Pipeline failed", err);
-  process.exit(1);
-});
+(async () => {
+  try {
+    await main();
+  } catch (err) {
+    logger.error("Pipeline failed", err);
+    process.exit(1);
+  }
+})();

@@ -46,17 +46,26 @@ export async function linkRelatedRequirements(
     return requirements;
   }
 
+  const findRoot = (idx: number): number => {
+    let current = idx;
+    let next = toMergeInto.get(current);
+    while (next !== undefined) {
+      current = next;
+      next = toMergeInto.get(current);
+    }
+    return current;
+  };
+
   const merged = [...requirements];
   const removed = new Set<number>();
 
-  for (const [targetIdx, anchorIdx] of toMergeInto) {
-    const anchor = merged[anchorIdx];
+  for (const [targetIdx] of toMergeInto) {
+    const rootIdx = findRoot(targetIdx);
+    const root = merged[rootIdx];
     const target = merged[targetIdx];
-    anchor.sourceChunkIds = [...new Set([...anchor.sourceChunkIds, ...target.sourceChunkIds])];
-    anchor.description = anchor.description.length >= target.description.length
-      ? anchor.description
-      : `${anchor.description} | ${target.description}`;
-    anchor.priority = getHighestPriority([anchor.priority, target.priority]);
+    root.sourceChunkIds = [...new Set([...root.sourceChunkIds, ...target.sourceChunkIds])];
+    root.description = `${root.description} | ${target.description}`;
+    root.priority = getHighestPriority([root.priority, target.priority]);
     removed.add(targetIdx);
   }
 

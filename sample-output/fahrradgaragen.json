@@ -1,8 +1,8 @@
 [
   {
-    "bulletPoint": "Fahrradgarage",
+    "bulletPoint": "Fahrradgaragensysteme",
     "description": {
-      "de": "Fahrradgarage"
+      "de": "Fahrradgaragensysteme"
     },
     "priority": "must",
     "confidence": null,
@@ -15,9 +15,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Lieferung und Montage",
+        "bulletPoint": "Allgemeine Anforderungen",
         "description": {
-          "de": "Lieferung und Montage"
+          "de": "Allgemeine Anforderungen"
         },
         "priority": "must",
         "confidence": null,
@@ -30,13 +30,13 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Fahrradgaragen im Baukastensystem liefern und montieren",
+            "bulletPoint": "Lieferung und Aufstellung von 2 Fahrradgaragensystemen",
             "description": {
-              "de": "Liefern und Montieren einer Fahrradgarage im Baukastensystem für 3 separat abschließbare Einzelgaragen nach DIN 79008, ADFC-zertifiziertes System"
+              "de": "Gegenstand der Ausschreibung ist die Lieferung und Aufstellung von 2 Stück Fahrradgaragensystemen besteht aus jeweils 3 abschließbaren Fahrradgaragen. | Liefern und Montieren einer Fahrradgarage im Baukastensystem für 3 separat abschließbare Einzelgaragen nach DIN 79008, ADFC-zertifiziertes System"
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -52,13 +52,77 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Komplette Ausführung inklusive Nebenleistungen",
+            "bulletPoint": "Abmessungen der Fahrradgarage",
             "description": {
-              "de": "Die Ausführung erfolgt komplett einschließlich aller für den bestimmungsgemäßen Gebrauch erforderlichen Nebenleistungen."
+              "de": "Abmessungen: Länge 2,50m, Tiefe 2,00m, Höhe ca. 1,65m."
+            },
+            "priority": "must",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Konstruktion und Materialien",
+    "description": {
+      "de": "Konstruktion und Materialien"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Tragkonstruktion",
+        "description": {
+          "de": "Tragkonstruktion"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Tragkonstruktion aus verzinktem Stahlblech",
+            "description": {
+              "de": "Tragkonstruktion aus verzinktem, gekantetem Stahlblech, statisch bemessen nach den einschlägigen Normen, Materialstärke 2mm."
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -80,9 +144,9 @@
         "citedPersonIdArray": []
       },
       {
-        "bulletPoint": "Abmessungen und Konstruktion",
+        "bulletPoint": "Fassadenbekleidung",
         "description": {
-          "de": "Abmessungen und Konstruktion"
+          "de": "Fassadenbekleidung"
         },
         "priority": "must",
         "confidence": null,
@@ -95,57 +159,13 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Abmessungen der Fahrradgaragen",
-            "description": {
-              "de": "Abmessungen: Länge 2,50m, Tiefe 2,00m, Höhe ca. 1,65m."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": false,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "LV_Fahrradgaragen (1).pdf:page-1-3"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Tragkonstruktion aus verzinktem Stahlblech",
-            "description": {
-              "de": "Tragkonstruktion aus verzinktem, gekantetem Stahlblech, statisch bemessen nach den einschlägigen Normen, Materialstärke 2mm."
-            },
-            "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": false,
-            "fullfillable": null,
-            "status": "waitingForAnalysis",
-            "aiReasoning": null,
-            "feedback": null,
-            "feedbackText": null,
-            "openQuestionId": null,
-            "deliverableArray": [],
-            "procurementDocumentChunkIdArray": [
-              "LV_Fahrradgaragen (1).pdf:page-1-3"
-            ],
-            "workspaceDocumentChunkIdArray": [],
-            "citedProductIdArray": [],
-            "citedPersonIdArray": []
-          },
-          {
-            "bulletPoint": "Fassadenbekleidung pulverbeschichtet RAL 7016",
+            "bulletPoint": "Fassadenbekleidung aus pulverbeschichtetem Stahlblech",
             "description": {
               "de": "Fassadenbekleidung aus Stahlblech, Oberfläche pulverbeschichtet mit Universal-Polyesterpulver, Farbe RAL 7016 anthrazitgrau, mit Korrosionsschutz in Anlehung an C3 nach DIN EN ISO 12944-2, alle erdberührendene Teile aus Edelstahl"
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -159,15 +179,57 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Dach und Entwässerung",
+    "description": {
+      "de": "Dach und Entwässerung"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Dachkonstruktion",
+        "description": {
+          "de": "Dachkonstruktion"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Kiesdach mit Holzkonstruktion",
+            "bulletPoint": "Kiesdach aus nachhaltiger Holzkonstruktion",
             "description": {
-              "de": "Dach aus nachhaltiger Holzkonstruktion. Aufbau von innen nach außen bestehend aus - OSB-3-Platte, Dicke ca. 15mm - EPDM-Dachbahn, Dicke ca. 1,5mm - Wurzelschutzvlies - Rundkies, Körnung 16/32mm, Höhe ca. 50mm mit Dachrand aus Glattblech mit Korrosionsschutz C3, pulverbeschichtet analog Fassadenbekleidung."
+              "de": "Dach aus nachhaltiger Holzkonstruktion Aufbau von innen nach außen bestehend aus - OSB-3-Platte, Dicke ca. 15mm - EPDM-Dachbahn, Dicke ca. 1,5mm - Wurzelschutzvlies - Rundkies, Körnung 16/32mm, Höhe ca. 50mm mit Dachrand aus Glattblech mit Korrosionsschutz C3, pulverbeschichtet analog Fassadenbekleidung."
             },
             "priority": "must",
-            "confidence": "high",
-            "equivalenceAllowed": false,
+            "confidence": "medium",
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -181,7 +243,28 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Entwässerung",
+        "description": {
+          "de": "Entwässerung"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
             "bulletPoint": "Entwässerung über Haupt- und Notablauf",
             "description": {
@@ -189,7 +272,71 @@
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Türen und Zugang",
+    "description": {
+      "de": "Türen und Zugang"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Türen",
+        "description": {
+          "de": "Türen"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Einflüglige Stahltür je Einzelgarage",
+            "description": {
+              "de": "Einflüglige Stahltür je Einzelgarage aus gekantetem verzinktem Stahlblech, pulverbeschichtet analog Fassadenbekleidung."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -205,13 +352,13 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Einflüglige Stahltür mit digitalem Schließzylinder",
+            "bulletPoint": "Tür mit Drückergarnitur und digitalem Schließzylinder",
             "description": {
-              "de": "Einflüglige Stahltür je Einzelgarage aus gekantetem verzinktem Stahlblech, pulverbeschichtet analog Fassadenbekleidung. Ausstattung mit Aluminium-Drückergarnitur mit innenseitiger Klinke als Notfallöffnung, Türdämpfer und digitalen, batteriebetriebenen Schließzylinder mit Anschluss an eine Buchungsplattform."
+              "de": "Ausstattung mit Aluminium-Drückergarnitur mit innenseitiger Klinke als Notfallöffnung, Türdämpfer und digitalen, batteriebetriebenen Schließzylinder mit Anschluss an eine Buchungsplattform."
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -233,7 +380,7 @@
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -247,15 +394,57 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Lastannahmen und Bemessung",
+    "description": {
+      "de": "Lastannahmen und Bemessung"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Bemessungsgrundlagen",
+        "description": {
+          "de": "Bemessungsgrundlagen"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Bemessungsgrundlagen Wind- und Schneelast",
+            "bulletPoint": "Bemessungsgrundlagen Windlastzone bis Zone 3",
             "description": {
-              "de": "Bemessungsgrundlagen Windlastzone bis Zone 3, Schneelast ca. 1,1kN/m², Wartungslast ca. 1,1 kN/m²"
+              "de": "Windlastzone bis Zone 3"
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -271,13 +460,99 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Aufstellen ohne Bodenverankerung mit Nivellierfüßen",
+            "bulletPoint": "Schneelast ca. 1,1kN/m²",
+            "description": {
+              "de": "Schneelast ca. 1,1kN/m²"
+            },
+            "priority": "must",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          },
+          {
+            "bulletPoint": "Wartungslast ca. 1,1 kN/m²",
+            "description": {
+              "de": "Wartungslast ca. 1,1 kN/m²"
+            },
+            "priority": "must",
+            "confidence": "medium",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Aufstellung und Nebenleistungen",
+    "description": {
+      "de": "Aufstellung und Nebenleistungen"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Aufstellung",
+        "description": {
+          "de": "Aufstellung"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Aufstellen ohne Bodenverankerung auf wassergebundener Wegedecke",
             "description": {
               "de": "Aufstellen ohne Bodenverankerung auf vorhandener wassergebundener Wegedecke gemäß Herstellerangaben mit Nivellierfüßen zum Ausgleich von Gefälle bis ca. 2%."
             },
             "priority": "must",
             "confidence": "high",
-            "equivalenceAllowed": false,
+            "equivalenceAllowed": null,
             "fullfillable": null,
             "status": "waitingForAnalysis",
             "aiReasoning": null,
@@ -299,9 +574,9 @@
         "citedPersonIdArray": []
       },
       {
-        "bulletPoint": "Zubehör",
+        "bulletPoint": "Nebenleistungen",
         "description": {
-          "de": "Zubehör"
+          "de": "Nebenleistungen"
         },
         "priority": "must",
         "confidence": null,
@@ -314,7 +589,71 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Fahrradhalter mit Einfahrtschiene",
+            "bulletPoint": "Ausführung inklusive aller Nebenleistungen",
+            "description": {
+              "de": "Die Ausführung erfolgt komplett einschließlich aller für den bestimmungsgemäßen Gebrauch erforderlichen Nebenleistungen."
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-1-3"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Fahrradhalter und Beleuchtung",
+    "description": {
+      "de": "Fahrradhalter und Beleuchtung"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Fahrradhalter",
+        "description": {
+          "de": "Fahrradhalter"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Fahrradhalter mit Einfahrtschiene liefern und montieren",
             "description": {
               "de": "Fahrradhalter mit Einfahrtschiene aus Edelstahl zur komfortablen Führung der Räder liefern und montieren, für Reifenbreite von 25 bis 65mm, Vorderradhalter zur Arretierung des Rades und Verhinderung des Herausrollens. Fabrikat: BRIX-IT oder gleichwertig"
             },
@@ -334,9 +673,30 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Beleuchtung",
+        "description": {
+          "de": "Beleuchtung"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Schwenkbare LED-Lichtleiste",
+            "bulletPoint": "Schwenkbare LED-Lichtleiste liefern und montieren",
             "description": {
               "de": "schwenkbare LED-Lichtleiste liefern und montieren, batteriebetrieben, mit integriertem Bewegungsensor und energiesparender Zeitschaltung"
             },
@@ -356,7 +716,49 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Oberflächenschutz",
+    "description": {
+      "de": "Oberflächenschutz"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Antigraffitischutz",
+        "description": {
+          "de": "Antigraffitischutz"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
             "bulletPoint": "Antigraffitischutz",
             "description": {
@@ -392,9 +794,9 @@
     "citedPersonIdArray": []
   },
   {
-    "bulletPoint": "Digitale Plattform",
+    "bulletPoint": "Digitale Buchungsplattform",
     "description": {
-      "de": "Digitale Plattform"
+      "de": "Digitale Buchungsplattform"
     },
     "priority": "must",
     "confidence": null,
@@ -407,9 +809,9 @@
     "openQuestionId": null,
     "deliverableArray": [
       {
-        "bulletPoint": "Buchungsplattform",
+        "bulletPoint": "Allgemeine Anforderungen",
         "description": {
-          "de": "Buchungsplattform"
+          "de": "Allgemeine Anforderungen"
         },
         "priority": "must",
         "confidence": null,
@@ -422,9 +824,9 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "Digitale Buchungsplattform",
+            "bulletPoint": "Digitale Buchungsplattform liefern, installieren und einrichten",
             "description": {
-              "de": "Digitale, cloudbasierte Buchungsplattform liefern, installieren und einrichten ausschließlich nutzbar per Smartphone-App (iOS / Android) und mehrstufigen KI-basierten und telefonischen Kundensupport, ohne stationären Terminal vor Ort. Mit eigenem QR-Code und Buchungsanleitung. Einrichtung des Portals inkl. Beratung des Betreibers zur Bereitstellung der Stammdaten, Einrichtung des Standortes auf dem Server des Betreibers Öffnen von stromnetzunabhängiger, Bluetooth-basierter, stromnetzunabhängiger Schließsysteme Funktionen für App:"
+              "de": "Digitale, cloudbasierte Buchungsplattform liefern, installieren und einrichten ausschließlich nutzbar per Smartphone-App (iOS / Android) und mehrstufigen KI-basierten und telefonischen Kundensupport, ohne stationären Terminal vor Ort. Mit eigenem QR-Code und Buchungsanleitung. Einrichtung des Portals inkl. Beratung des Betreibers zur Bereitstellung der Stammdaten, Einrichtung des Standortes auf dem Server des Betreibers. Öffnen von stromnetzunabhängiger, Bluetooth-basierter, stromnetzunabhängiger Schließsysteme. Funktionen für App:"
             },
             "priority": "must",
             "confidence": "high",
@@ -442,9 +844,30 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Funktionen für Nutzer",
+        "description": {
+          "de": "Funktionen für Nutzer"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Interactive map and QR code selection",
+            "bulletPoint": "Interactive map and selection",
             "description": {
               "de": "Suche und Standortwahl: interaktive Kartenansicht, Auswahl der Abstellanlagen per Link oder QR-Code."
             },
@@ -466,7 +889,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Flexible pricing and booking system",
+            "bulletPoint": "Flexible pricing and booking",
             "description": {
               "de": "Buchung und Verwaltung: zeitlich gestaffelte Preisübersicht, flexible Tarifsysteme (z. B. Pay-as-yougo, Monats- und Jahresmieten)."
             },
@@ -488,7 +911,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Multiple payment methods and auto invoicing",
+            "bulletPoint": "Multiple payment methods",
             "description": {
               "de": "Zahlung und Bestätigung: verschiedene Zahlungsmethoden (z. B. Kreditkarte, Klarna, Apple Pay, Google Pay), automatische Rechnungsstellung und Buchungsbestätigung per E-Mail."
             },
@@ -510,7 +933,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Notifications for booking reminders",
+            "bulletPoint": "Notifications for booking",
             "description": {
               "de": "Benachrichtigungen: Erinnerung vor Ablauf des Buchungszeitraums, Informationen zu laufenden oder beendeten Buchungen."
             },
@@ -532,7 +955,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "User account with registration and history",
+            "bulletPoint": "User account features",
             "description": {
               "de": "Nutzerkonto: Registrierung, Login, Änderung persönlicher Daten, Buchungshistorie, Stornofunktionen."
             },
@@ -554,7 +977,7 @@
             "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "GDPR-compliant server and encrypted data",
+            "bulletPoint": "GDPR-compliant data security",
             "description": {
               "de": "Datenschutz und Sicherheit: DSGVO-konforme Serverbereitstellung, verschlüsselte Datenübertragung."
             },
@@ -580,11 +1003,32 @@
         "workspaceDocumentChunkIdArray": [],
         "citedProductIdArray": [],
         "citedPersonIdArray": []
-      },
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Kundenservice und Support",
+    "description": {
+      "de": "Kundenservice und Support"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
       {
-        "bulletPoint": "Support und Verwaltung",
+        "bulletPoint": "Support",
         "description": {
-          "de": "Support und Verwaltung"
+          "de": "Support"
         },
         "priority": "must",
         "confidence": null,
@@ -597,7 +1041,7 @@
         "openQuestionId": null,
         "deliverableArray": [
           {
-            "bulletPoint": "AI-based 24/7 first level support in 14 languages",
+            "bulletPoint": "AI-based 24/7 customer support",
             "description": {
               "de": "Automatisierter KI-basierter Kundensupport: 24/7 Kundensupport in 14 Sprachen als First Level Support."
             },
@@ -639,7 +1083,49 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Verwaltung und Management",
+    "description": {
+      "de": "Verwaltung und Management"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Standort- und Anlagenverwaltung",
+        "description": {
+          "de": "Standort- und Anlagenverwaltung"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
             "bulletPoint": "Central location and device management",
             "description": {
@@ -661,9 +1147,30 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Tarif- und Buchungsmanagement",
+        "description": {
+          "de": "Tarif- und Buchungsmanagement"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Individual tariff and booking management",
+            "bulletPoint": "Custom tariff and booking management",
             "description": {
               "de": "Tarif- und Buchungsmanagement: individuelle Einstellung von Tarifsystemen, Mietdauern und gestaffelten Preisen und Anpassung von Buchungsbedingungen und Reservierungsoptionen."
             },
@@ -683,9 +1190,30 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      },
+      {
+        "bulletPoint": "Nutzer- und Sicherheitsmanagement",
+        "description": {
+          "de": "Nutzer- und Sicherheitsmanagement"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "User and security management with SSO",
+            "bulletPoint": "User and security management",
             "description": {
               "de": "Nutzer- und Sicherheitsmanagement: Verwaltung der Nutzer, Rechte und Zugangsberechtigungen, Integration von Single Sign-On (SSO) für externe Identitätsprovider, DSGVO-konforme Datenhaltung und regelmäßige Updates der Sicherheitsstandards."
             },
@@ -705,9 +1233,51 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
-          },
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Reporting und Analyse",
+    "description": {
+      "de": "Reporting und Analyse"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Echtzeit-Reporting",
+        "description": {
+          "de": "Echtzeit-Reporting"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
           {
-            "bulletPoint": "Real-time status and reporting functions",
+            "bulletPoint": "Real-time reporting and analytics",
             "description": {
               "de": "Auswertungs- und Reporting-Funktionen: Echtzeit-Statusanzeige aller Geräte und statistische Auswertung der Belegungsraten, Verwaltung von Rückerstattungen und detaillierten Abrechnungen."
             },
@@ -727,11 +1297,75 @@
             "workspaceDocumentChunkIdArray": [],
             "citedProductIdArray": [],
             "citedPersonIdArray": []
+          }
+        ],
+        "procurementDocumentChunkIdArray": [],
+        "workspaceDocumentChunkIdArray": [],
+        "citedProductIdArray": [],
+        "citedPersonIdArray": []
+      }
+    ],
+    "procurementDocumentChunkIdArray": [],
+    "workspaceDocumentChunkIdArray": [],
+    "citedProductIdArray": [],
+    "citedPersonIdArray": []
+  },
+  {
+    "bulletPoint": "Gebühren und Kosten",
+    "description": {
+      "de": "Gebühren und Kosten"
+    },
+    "priority": "must",
+    "confidence": null,
+    "equivalenceAllowed": null,
+    "fullfillable": null,
+    "status": "waitingForAnalysis",
+    "aiReasoning": null,
+    "feedback": null,
+    "feedbackText": null,
+    "openQuestionId": null,
+    "deliverableArray": [
+      {
+        "bulletPoint": "Nutzungsgebühren",
+        "description": {
+          "de": "Nutzungsgebühren"
+        },
+        "priority": "must",
+        "confidence": null,
+        "equivalenceAllowed": null,
+        "fullfillable": null,
+        "status": "waitingForAnalysis",
+        "aiReasoning": null,
+        "feedback": null,
+        "feedbackText": null,
+        "openQuestionId": null,
+        "deliverableArray": [
+          {
+            "bulletPoint": "Usage fee for portal and app",
+            "description": {
+              "de": "Nutzungsgebühr des Nutzer- und Betreiber-Web-Portal sowie Smartphone-App, inkl. Betrieb und Wartung des Servers, regelmäßige UpDates, Telefon-/remote-Support"
+            },
+            "priority": "must",
+            "confidence": "high",
+            "equivalenceAllowed": null,
+            "fullfillable": null,
+            "status": "waitingForAnalysis",
+            "aiReasoning": null,
+            "feedback": null,
+            "feedbackText": null,
+            "openQuestionId": null,
+            "deliverableArray": [],
+            "procurementDocumentChunkIdArray": [
+              "LV_Fahrradgaragen (1).pdf:page-5-6"
+            ],
+            "workspaceDocumentChunkIdArray": [],
+            "citedProductIdArray": [],
+            "citedPersonIdArray": []
           },
           {
-            "bulletPoint": "Usage fee for portal and app including maintenance",
+            "bulletPoint": "Fee per digital lock cylinder",
             "description": {
-              "de": "Nutzungsgebühr des Nutzer- und Betreiber-Web-Portal sowie Smartphone-App, inkl. Betrieb und Wartung des Servers, regelmäßige UpDates, Telefon-/remote-Support Gebühr je digitalen Schließzylinder für 60 Monate"
+              "de": "Gebühr je digitalen Schließzylinder für 60 Monate"
             },
             "priority": "must",
             "confidence": "high",
