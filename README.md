@@ -9,86 +9,104 @@ git clone https://github.com/AchrefHabhab/tender-extraction.git
 cd tender-extraction
 npm install
 cp .env.example .env   # add your DeepSeek API key
+npx tsx src/index.ts sample-tenders/christmas-lights
 ```
 
-Place your tender PDF(s) in a folder (e.g., `sample-tenders/my-tender/`), then run:
-
-```bash
-npx tsx src/index.ts sample-tenders/my-tender
-```
-
-Output JSON is written to `output/`. Pre-generated sample outputs are available in `sample-output/`.
+Output JSON is written to `output/`. Pre-generated sample outputs are in `sample-output/`.
 
 ### Docker
 
 ```bash
 docker build -t tender-extraction .
-docker run --env-file .env -v ./sample-tenders:/app/sample-tenders -v ./output:/app/output tender-extraction sample-tenders/my-tender
+docker run --env-file .env -v ./sample-tenders:/app/sample-tenders -v ./output:/app/output tender-extraction sample-tenders/christmas-lights
 ```
 
-## How It Works
+## Pipeline Architecture
 
 ```
-PDF folder → Parse → Chunk → Extract → Consolidate → Classify → Merge → Validate → JSON
+PDF folder → Parse → Chunk → Extract → Consolidate → Link → Classify → Merge → Validate → JSON
 ```
 
-1. **PDF Parsing** — `pdf-parse` v2 extracts text per page from each PDF in the folder.
-2. **Intelligent Chunking** — Pages are merged by detected section headings. Noise pages (tables of contents, pricing grids, boilerplate) are filtered out.
-3. **LLM Extraction** — Each chunk is sent to DeepSeek with a prompt that extracts individual requirements with priority, confidence, and equivalence fields.
-4. **Consolidation** — A strict deduplication pass merges only true duplicates (same text extracted from overlapping pages). No semantic grouping — we keep separate items separate.
-5. **Classification** — Requirements are organized into Level 1 (broad categories) and Level 2 (sub-groups) using the LLM.
-6. **Tree Merge** — A post-processing step merges duplicate Level 1 categories created across batches (e.g., "Gas Supply" and "Gasversorgung").
-7. **Validation** — Zod validates the full output tree against the `ProcurementMatchDeliverable` schema before writing.
+1. **PDF Parsing** — Extracts text per page from each PDF. Handles structured formats: German Leistungsverzeichnisse (bill of quantities), form-based tenders, tabular specifications, and hierarchical section numbering.
+2. **Intelligent Chunking** — Merges pages by detected section boundaries (`GU.53.01`, `Section 4`, `Abschnitt 2`). Filters noise (empty price columns, placeholder lines, signature fields).
+3. **LLM Extraction** — Each chunk → DeepSeek with calibrated prompts for priority/confidence. Handles German (`muss`, `soll`, `kann`) and English (`must`, `should`, `may`) language markers.
+4. **Reference Resolution** — Detects cross-references ("see Annex A", "gemäß Anlage B") and links additional source chunks.
+5. **Consolidation** — Batch deduplication + global dedup pass to merge identical requirements from overlapping pages.
+6. **Semantic Linking** — Finds requirements from different chunks that describe the same deliverable (Jaccard similarity + LLM verification). Merges scattered pieces with full traceability.
+7. **Top-Down Classification** — First discovers 5-15 Level 1 categories from all titles, then classifies each requirement into this fixed set. Prevents L1 fragmentation.
+8. **Tree Merge** — Merges duplicate L1 categories across batches (e.g., "Gas Supply" / "Gasversorgung").
+9. **Validation** — Zod validates the full output tree against the `ProcurementMatchDeliverable` schema.
+10. **Metrics** — Logs source coverage, consolidation rate, priority entropy, and tree balance per run.
+
+## What It Handles
+
+- **Structured German LVs** — Hierarchical numbering (GU.53.01.01.01), quantity/unit columns, pricing grids. The chunker detects section boundaries; the LLM extracts specs from linearized table text.
+- **Form-based tenders** — Contractor detail forms, evaluation criteria tables, signature areas. Empty fields are ignored; actual requirements and evaluation criteria are extracted.
+- **Large multi-section documents** — 400+ page tenders split into meaningful chunks with cross-section linking.
+- **Bilingual content** — Automatic locale detection (de/en) applied to all output descriptions.
+
+## Results (Sample Tenders)
+
+| Tender | Pages | L1 Categories | Requirements | Multi-Chunk | Coverage |
+|--------|-------|---------------|--------------|-------------|----------|
+| Christmas Lights (EN) | 5 | 13 | 50 | 0% | 66.7% |
+| Fahrradgaragen (DE) | 6 | 13 | 32 | 0% | 100% |
+| Salzburg Laboratory (DE) | 409 | 11 | 1,468 | 25.1% | 98.0% |
+
+Multi-chunk = % of leaves referencing more than one source chunk (cross-section linking).
 
 ## Design Choices
 
-**Each folder = one tender.** All PDFs in a folder are treated as parts of the same tender (main notice + annexes + datasheets), producing one output tree.
+- **Cache-first** — Every LLM call is cached (SHA-256 of prompt → `.cache/`). Re-runs cost $0. Enables fast iteration without API spend.
+- **Top-down classification** — Categories are derived once from all titles, then each batch sorts into this fixed set. Prevents the 46-category fragmentation that bottom-up produces.
+- **Calibrated prompts** — Few-shot examples + language markers (DE/EN) guide priority/confidence assignments. German LV-specific rules distinguish physical specs ("must") from approximate language ("should").
+- **Prompts as .txt files** — All LLM prompts live in `src/prompts/*.txt`, loaded at runtime. Easy to iterate without touching logic.
+- **Retry with backoff** — LLM calls retry 3× with exponential delay. Handles transient API errors.
+- **Concurrency control** — `pMap` limits parallel calls (5 concurrent) to avoid rate limits while maximizing throughput.
 
-**Cache-first approach.** Every LLM call is cached to disk (SHA-256 of prompt → `.cache/`). Re-runs are instant. This enables fast iteration on downstream logic without re-calling the API.
+## Cost Efficiency
 
-**Strict consolidation over aggressive merging.** The first version over-merged (28 requirements → 2). The current version only merges exact duplicates. It's better to have a stray duplicate than to lose a real requirement.
+The pipeline minimizes API costs through:
+- **Disk cache** — identical prompts never call the API twice
+- **Batch processing** — groups of 50 requirements per LLM call
+- **Noise filtering** — skips chunks that are pure pricing/boilerplate (no wasted extraction calls)
+- **Sampled category discovery** — caps at 500 titles for large tenders to avoid context overflow
 
-**Prompts as .txt files.** All LLM prompts live in `src/prompts/*.txt`, loaded at runtime. Easy to iterate on prompt engineering without touching code.
-
-**Retry with exponential backoff.** LLM calls retry up to 3 times with doubling delay. Handles transient API errors gracefully.
-
-**Batch-then-merge for classification.** Since the LLM has a context window limit, we classify in batches of 50 and then merge fragmented Level 1 categories in a final pass.
+A full run on all three sample tenders costs ~$0.12 (DeepSeek pricing). Cached re-runs cost $0.
 
 ## Output Shape
 
-The output matches the `ProcurementMatchDeliverable` interface:
-
-- **Level 1** — Top categories (e.g., "Laboratory Furniture", "Electrical Installation")
+- **Level 1** — Broad categories (e.g., "Laboratory Furniture", "Electrical Installations")
 - **Level 2** — Sub-groups (e.g., "Fume Hoods", "Wiring and Cabling")
 - **Level 3** — Individual requirements with `bulletPoint`, `description`, `priority`, `confidence`, `equivalenceAllowed`, and `procurementDocumentChunkIdArray` linking back to source chunks
 
-## Limitations and Honest Assessment
+## Limitations
 
-- **No cross-chunk consolidation.** The consolidator works per-batch (30 items). A requirement split across distant chunks in different batches won't be merged. A future improvement: a second global dedup pass.
-- **Classification quality scales with tender complexity.** Simple tenders (5-6 pages) produce clean trees. The 409-page Salzburg tender produces 39 Level 1 categories — reasonable but could be tighter with a two-pass classification approach.
-- **OCR not yet wired.** The `tesseract.js` dependency is installed but not integrated. Scanned PDFs without embedded text won't extract properly.
-- **German/English mixed output.** For bilingual tenders, some categories appear in their original language. The merger handles some of this, but not all.
-- **No cross-file chunk linking.** When a tender has multiple PDFs (main + annex), chunks reference their source file but the consolidator doesn't yet detect "see Annex A" references to merge across files.
+- **Linker is lexical** — Cross-chunk linking uses word overlap (Jaccard). Requirements described in completely different words won't be linked. An embeddings-based approach would improve this.
+- **German LVs are priority-heavy** — Construction specs tend to produce ~95% "must" because most items genuinely are mandatory. The prompt calibration helps but can't override the source material.
+- **Small tenders show 0% consolidation** — Expected: a 5-page PDF with 3 chunks has no cross-section repetition to merge.
+- **OCR not integrated** — Scanned PDFs without embedded text layer won't extract properly.
 
 ## Project Structure
 
 ```
 src/
-├── index.ts              # CLI entry point, orchestrates pipeline
+├── index.ts              # CLI entry, orchestrates pipeline
 ├── parsers/              # PDF parsing + intelligent chunking
-├── extractors/           # LLM client with retry + caching
+├── extractors/           # LLM client (retry, cache), requirement extraction
 ├── prompts/              # All LLM prompts as .txt files
-├── builders/             # Consolidation, tree building, merging
-├── validators/           # Zod output schema validation
-├── types/                # TypeScript interfaces
-└── utils/                # Config, logger, output writer
+├── builders/             # Consolidation, linker, tree building, merging
+├── metrics/              # Output quality metrics (coverage, entropy, balance)
+├── validators/           # Zod schema validation
+├── types/                # TypeScript interfaces + enums
+└── utils/                # Config, logger, locale detection, concurrency
 ```
 
 ## Scripts
 
 ```bash
-npm run dev -- <path>     # Run pipeline with tsx
-npm run verify            # Type-check + lint
-npm run lint              # ESLint
-npm run format            # Prettier
+npx tsx src/index.ts <path>   # Run pipeline
+npm run verify                # Type-check + lint
+npm test                      # Run all tests (30 tests)
+npm run format                # Prettier
 ```
