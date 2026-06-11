@@ -2,23 +2,64 @@
 
 A CLI tool that takes a folder of procurement tender PDFs and extracts all requirements into a structured 3-level tree of `ProcurementMatchDeliverable` objects.
 
-## Quick Start
+## Setup
+
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
 
 ```bash
 git clone https://github.com/AchrefHabhab/tender-extraction.git
 cd tender-extraction
 npm install
-cp .env.example .env   # add your DeepSeek API key
+```
+
+### Environment Configuration
+
+The pipeline requires a DeepSeek API key. The `.env` file is **not committed** to the repository for security reasons.
+
+Create your `.env` from the provided template:
+
+```bash
+cp .env.example .env
+```
+
+Then open `.env` and add your API key:
+
+```env
+LLM_API_KEY=sk-your-deepseek-api-key-here
+LLM_BASE_URL=https://api.deepseek.com/v1
+LLM_MODEL=deepseek-chat
+LOG_LEVEL=info
+```
+
+The `LLM_API_KEY` is the only required value. The other fields have working defaults.
+
+### Run the Pipeline
+
+```bash
 npx tsx src/index.ts sample-tenders/christmas-lights
 ```
 
+Replace `sample-tenders/christmas-lights` with any folder containing your PDF(s).
+
 Output JSON is written to `output/`. Pre-generated sample outputs are in `sample-output/`.
 
-### Docker
+### Run with Docker
 
 ```bash
 docker build -t tender-extraction .
 docker run --env-file .env -v ./sample-tenders:/app/sample-tenders -v ./output:/app/output tender-extraction sample-tenders/christmas-lights
+```
+
+### Verify the Setup
+
+```bash
+npm run verify   # type-check + lint (no API key needed)
+npm test         # run 30 unit tests (no API key needed)
 ```
 
 ## Pipeline Architecture
@@ -102,11 +143,3 @@ src/
 └── utils/                # Config, logger, locale detection, concurrency
 ```
 
-## Scripts
-
-```bash
-npx tsx src/index.ts <path>   # Run pipeline
-npm run verify                # Type-check + lint
-npm test                      # Run all tests (30 tests)
-npm run format                # Prettier
-```
